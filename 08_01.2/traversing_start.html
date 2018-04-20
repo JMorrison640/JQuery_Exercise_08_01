@@ -7,6 +7,27 @@
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
+            // The children function retrieves the immediate child elements of the matched set, excluding text nodes.
+            $("#example").children().css("border", "3px solid red");
+
+            var elem = $("#para1");
+            // elem.prev().css("border", "3px solid red");
+            // elem.next().css("border", "3px solid green");
+            // elem.parents().css("border", "3px solid blue");
+            // elem.parentsUntil().css("border", "3px solid red");
+              // $("#example").find("#para4").css("border", "3px solid red");
+
+            // use the find function to locate content within particular elements
+
+            // 
+
+            var leftmargin = 0;
+            var border = 3;
+            $("#example p").each(function (index, element) {
+            $(element).css("border", border+"px solid red").css("margin=left", leftmargin);
+            border += 2;
+            leftmargin += 10;
+          });
         });
     </script>
 </head>
